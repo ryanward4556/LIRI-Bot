@@ -1,8 +1,7 @@
-require("dotenv").config();
+var require = require("dotenv").config();
 
 
-var keys = require("./keys.js");
-
+var keys = require("keys.js");
 var spotify = new Spotify(keys.spotify);
 
 
@@ -24,6 +23,17 @@ var spotify = new Spotify(keys.spotify);
 // The song's name
 // A preview link of the song from Spotify
 // The album that the song is from
+
+const spotifySearch = key => {
+    spotify.search({ type: 'track', query: 'All the Small Things' }, function (err, data) {
+        if (err) {
+            return console.log('Error occurred: ' + err);
+        }
+        console.log(data);
+    });
+}
+// spotifySearch(spotify);
+
 
 // ----------------------------------------------------------------------------
 
