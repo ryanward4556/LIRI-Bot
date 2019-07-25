@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ryanward4556/LIRI-Bot/issues"
   },
-  "homepage": "https://github.com/ryanward4556/LIRI-Bot#readme"
+  "homepage": "https://github.com/ryanward4556/LIRI-Bot#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.1.1"
+  }
 }
