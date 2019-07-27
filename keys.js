@@ -1,16 +1,18 @@
-console.log('this is loaded');
 
-exports.spotify = {
+//  Spotify key
+module.exports.spotify = {
     id: process.env.SPOTIFY_ID,
     secret: process.env.SPOTIFY_SECRET
 };
 
-exports.concert = {
+//  Concert key
+module.exports.concert = {
     id: process.env.CONCERT_ID,
     secret: process.env.CONCERT_SECRET
 };
 
-exports.movie = {
+//  Movie key
+module.exports.movie = {
     id: process.env.MOVIE_ID,
     secret: process.env.MOVIE_SECRET
 };
