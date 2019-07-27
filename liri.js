@@ -1,8 +1,26 @@
-var dotenv = require("dotenv").config();
+require("dotenv").config();
 
-var keys = require("./keys.js");
-console.log(keys.spotify);
-var spotify = new Spotify(keys.spotify);
+const keys = require("./keys");
+const Spotify = require("./spotify");
+
+var spotify = new Spotify(keys.spotifyKey);
+
+const spotifyObj = {
+    type: "track",
+    query: process.argv.splice(3).join(' '),
+    limit: 1
+}
+
+const command = process.argv[2];
+
+switch (command) {
+    case 'spotify-this-song':
+        console.log('\nSearching Spotify for ' + process.argv[3] + '.....\n')
+        spotify.spotifySearch(spotifyObj);
+        break;
+    default:
+        console.log('Enter a command');
+}
 
 
 // concert-this
@@ -19,10 +37,6 @@ var spotify = new Spotify(keys.spotify);
 
 // If no song is provided then your program will default to "The Sign" by Ace of Base.
 
-// Artist(s)
-// The song's name
-// A preview link of the song from Spotify
-// The album that the song is from
 
 const spotifySearch = key => {
     spotify.search({ type: 'track', query: 'All the Small Things' }, function (err, data) {

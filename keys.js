@@ -1,6 +1,6 @@
 
 //  Spotify key
-module.exports.spotify = {
+module.exports.spotifyKey = {
     id: process.env.SPOTIFY_ID,
     secret: process.env.SPOTIFY_SECRET
 };
