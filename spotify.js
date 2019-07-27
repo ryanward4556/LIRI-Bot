@@ -1,4 +1,4 @@
-var SpotifyAPI = require("node-spotify-api");
+const SpotifyAPI = require("node-spotify-api");
 
 const keys = require("./keys");
 const spotify = new SpotifyAPI(keys.spotifyKey);
@@ -10,7 +10,6 @@ var Spotify = function () {
                 return console.log('Error occurred: ' + err);
             }
             const response = data.tracks.items[0];
-
             const artist = response.artists[0].name;
             const name = response.name;
             const externalURL = response.external_urls.spotify;
@@ -22,10 +21,9 @@ var Spotify = function () {
                 console.log('Song: ' + name);
                 previewURL === null ? console.log("No song preview available") : console.log('Preview: ' + previewURL);
                 console.log('Open Spotify: ' + externalURL);
-                console.log('Album: ' + album);
+                console.log('Album: ' + album + '\n');
             }
             printStats();
-
         });
     }
 }

@@ -2,12 +2,19 @@ require("dotenv").config();
 
 const keys = require("./keys");
 const Spotify = require("./spotify");
+const Concert = require("./concert");
+const Movie = require('./movie');
 
-var spotify = new Spotify(keys.spotifyKey);
+const spotify = new Spotify();
+const concert = new Concert();
+// const movie = new Movie()
+
+
+const search = process.argv.splice(3).join(' ')
 
 const spotifyObj = {
     type: "track",
-    query: process.argv.splice(3).join(' '),
+    query: search,
     limit: 1
 }
 
@@ -15,9 +22,16 @@ const command = process.argv[2];
 
 switch (command) {
     case 'spotify-this-song':
-        console.log('\nSearching Spotify for ' + process.argv[3] + '.....\n')
+        console.log('\nSearching Spotify for ' + search + '.....\n')
         spotify.spotifySearch(spotifyObj);
         break;
+    case 'concert-this':
+        console.log('\nSearching concerts for ' + search + '.....\n')
+        concert.concertSearch(search)
+        break;
+    // case 'movie-this':
+    //     console.log('\nSearching movies for ' + search + '.....\n')
+    //     break;
     default:
         console.log('Enter a command');
 }

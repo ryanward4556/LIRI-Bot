@@ -1,4 +1,3 @@
-
 //  Spotify key
 module.exports.spotifyKey = {
     id: process.env.SPOTIFY_ID,
@@ -6,15 +5,13 @@ module.exports.spotifyKey = {
 };
 
 //  Concert key
-module.exports.concert = {
-    id: process.env.CONCERT_ID,
-    secret: process.env.CONCERT_SECRET
+module.exports.concertKey = {
+    id: process.env.CONCERT_ID
 };
 
 //  Movie key
-module.exports.movie = {
-    id: process.env.MOVIE_ID,
-    secret: process.env.MOVIE_SECRET
+module.exports.movieKey = {
+    id: process.env.MOVIE_ID
 };
 
 
