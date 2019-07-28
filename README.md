@@ -15,7 +15,7 @@ This application will take in the following commands:
 Each search displays relevant information for the searched item and is added to the searches.txt file. 
 
 ## YouTube demo link: 
-    [LIRI Bot demo](https://youtu.be/wimQ16VG4zc)
+    [LIRI Bot demo] (https://youtu.be/wimQ16VG4zc)
 
 ### Technologies Used: 
     * Node.js
