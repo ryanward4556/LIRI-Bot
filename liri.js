@@ -7,7 +7,7 @@ const Movie = require('./movie');
 
 const spotify = new Spotify();
 const concert = new Concert();
-// const movie = new Movie()
+const movie = new Movie();
 
 
 const search = process.argv.splice(3).join(' ')
@@ -29,22 +29,14 @@ switch (command) {
         console.log('\nSearching concerts for ' + search + '.....\n')
         concert.concertSearch(search)
         break;
-    // case 'movie-this':
-    //     console.log('\nSearching movies for ' + search + '.....\n')
-    //     break;
+    case 'movie-this':
+        console.log('\nSearching movies for ' + search + '.....\n')
+        movie.movieSearch(search)
+        break;
     default:
         console.log('Enter a command');
 }
 
-
-// concert-this
-// node liri.js concert-this <artist/band name here>
-
-// Name of the venue
-// Venue location
-// Date of the Event (use moment to format this as "MM/DD/YYYY")
-
-// ----------------------------------------------------------------------------
 
 // spotify-this-song
 // node liri.js spotify-this-song '<song name here>'
@@ -67,7 +59,6 @@ const spotifySearch = key => {
 
 // movie-this
 // node liri.js movie-this '<movie name here>'
-
 
 // * Title of the movie.
 // * Year the movie came out.
