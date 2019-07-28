@@ -13,3 +13,21 @@ do-what-it-says:
 spotify-this-song: 
 movie-this: v for vendetta
 movie-this: v for vendetta
+spotify-this-song: dedicate
+spotify-this-song: dedicate
+spotify-this-song: jupiter
+spotify-this-song: sing a song
+spotify-this-song: celebration
+spotify-this-song: serpentine fire
+spotify-this-song: poison
+concert-this: fish
+spotify-this-song: poison
+spotify-this-song: serpentine fire
+spotify-this-song: 
+concert-this: lil wayne
+concert-this: j balvin
+concert-this: fish
+movie-this: the dark knight
+movie-this: interstellar
+movie-this: v for vendetta
+do-what-it-says: 
