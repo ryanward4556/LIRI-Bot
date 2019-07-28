@@ -16,6 +16,8 @@ Each search displays relevant information for the searched item and is added to 
 
 ## YouTube demo link: 
     [LIRI Bot demo] (https://youtu.be/wimQ16VG4zc)
+    [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
 
 ### Technologies Used: 
     * Node.js
