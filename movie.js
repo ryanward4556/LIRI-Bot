@@ -9,7 +9,6 @@ var Movie = function () {
     this.movieSearch = function (movie) {
 
         const queryURL = "http://www.omdbapi.com/?apikey=" + movieKey + "&t=" + movie;
-        // console.log(queryURL);
 
         axios.get(queryURL).then(
             function (response) {

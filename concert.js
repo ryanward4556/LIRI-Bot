@@ -11,10 +11,13 @@ var Concert = function () {
 
         axios.get(queryURL).then(
             function (response) {
-                for (let i = 0; i < 5; i++) {
-                    
+                for (let i = 0; i < 3; i++) {
                     let lineup = response.data[i].lineup;
-                    if (lineup.length > 1) lineup = lineup.join(", ");
+                    if (lineup.length > 1) {
+                        lineup = lineup.join(", ");
+                    } else if (lineup === undefined) {
+                        lineup = "Not listed"
+                    }
                     const venueName = response.data[i].venue.name;
                     const venueCity = response.data[i].venue.city;
                     let venueState = response.data[i].venue.region;
@@ -25,13 +28,9 @@ var Concert = function () {
                         venueState = response.data[i].venue.country;
                     }
 
-                    console.log(`
-                    ----------------------------------------\n
-                    Lineup: ${lineup + '\n'}
-                    Venue: ${venueName}
-                    Location: ${venueCity + ", " + venueState}
-                    Date: ${date}
-                    `)
+                    console.log(`Lineup: ${lineup + '\n'}\nVenue: ${venueName}\nLocation: ${venueCity + ", " + venueState}\nDate: ${date}`)
+                    console.log("\n----------------------------------------\n");
+
                 }
             }
         )
